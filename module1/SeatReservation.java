@@ -25,7 +25,7 @@ public class SeatReservation
 	{
 		return flightDate;
 	}
-	public setFlightDate(java.time.LocalDate date)
+	public void setFlightDate(java.time.LocalDate date)
 	{
 		flightDate = date;
 	}
@@ -59,5 +59,6 @@ public class SeatReservation
 		output += "lastName=";
 		if (lastName == null) output += "null}";
 		else output += lastName + "}";
+		return output;
 	}
 }
