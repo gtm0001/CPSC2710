@@ -19,7 +19,7 @@ public class SeatReservation
 	}
 	public void setFlightDesignator(String fd) throws IllegalArgumentException
 	{
-		if (fd.length() < 4 || fd.length() > 6)
+		if (fd == null || fd.length() < 4 || fd.length() > 6)
 		{
 			throw new IllegalArgumentException("Number of characters must be be 4-6.");
 		}
