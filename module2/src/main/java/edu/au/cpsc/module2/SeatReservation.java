@@ -48,9 +48,10 @@ public class SeatReservation
 	{
 		return firstName;
 	}
-	public void setFirstName(String fn)
+	public void setFirstName(String fn) throws IllegalArgumentException
 	{
-		firstName = fn;
+		if (fn == null || fn.isEmpty()) {throw new IllegalArgumentException("First name cannot be empty.");}
+		else firstName = fn;
 	}
 	public String getLastName()
 	{
@@ -58,7 +59,8 @@ public class SeatReservation
 	}
 	public void setLastName(String ln)
 	{
-		lastName = ln;
+		if (ln == null || ln.isEmpty()) {throw new IllegalArgumentException("Last name cannot be empty.");}
+		else lastName = ln;
 	}
 	public int getNumberOfBags()
 	{
