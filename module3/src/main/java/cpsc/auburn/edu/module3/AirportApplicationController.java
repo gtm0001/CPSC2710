@@ -52,7 +52,7 @@ public class AirportApplicationController
     protected void identTextFieldAction()
     {
         searchFailedLabel.setText("");
-        String code = identTextField.getText();
+        String code = identTextField.getText().toUpperCase();
         if (airportList == null || airportList.isEmpty())
         {
             try
@@ -95,7 +95,7 @@ public class AirportApplicationController
     protected void iataCodeTextFieldAction()
     {
         searchFailedLabel.setText("");
-        String code = iataCodeTextField.getText();
+        String code = iataCodeTextField.getText().toUpperCase();
         if (airportList == null || airportList.isEmpty())
         {
             try
@@ -138,7 +138,7 @@ public class AirportApplicationController
     protected void localCodeTextFieldAction()
     {
         searchFailedLabel.setText("");
-        String code = localCodeTextField.getText();
+        String code = localCodeTextField.getText().toUpperCase();
         if (airportList == null || airportList.isEmpty())
         {
             try
