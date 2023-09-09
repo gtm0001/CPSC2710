@@ -1,10 +1,11 @@
-package edu.au.cpsc.module4;
+package edu.au.cpsc.module4.Model;
 
+import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.util.HashSet;
 
-public class ScheduledFlight
+public class ScheduledFlight implements Serializable
 {
     private String flightDesignator;
     private String departureAirportIdent;
@@ -111,5 +112,18 @@ public class ScheduledFlight
                 ", arrivalTime=" + arrivalTime +
                 ", daysOfWeek=" + daysOfWeek +
                 '}';
+    }
+
+    public String formattedDaysOfWeek()
+    {
+        String output = "";
+        if (daysOfWeek.contains(DayOfWeek.SATURDAY)) output += "S";
+        if (daysOfWeek.contains(DayOfWeek.FRIDAY)) output += "F";
+        if (daysOfWeek.contains(DayOfWeek.THURSDAY)) output += "R";
+        if (daysOfWeek.contains(DayOfWeek.WEDNESDAY)) output += "W";
+        if (daysOfWeek.contains(DayOfWeek.TUESDAY)) output += "T";
+        if (daysOfWeek.contains(DayOfWeek.MONDAY)) output += "M";
+        if (daysOfWeek.contains(DayOfWeek.SUNDAY)) output += "U";
+        return output;
     }
 }
