@@ -13,6 +13,7 @@ public class ScheduledFlight implements Serializable
     private java.time.LocalTime departureTime;
     private java.time.LocalTime arrivalTime;
     private HashSet<DayOfWeek> daysOfWeek;
+    private String formattedDaysOfWeek;
 
     public ScheduledFlight()
     {
@@ -22,6 +23,7 @@ public class ScheduledFlight implements Serializable
         departureTime = java.time.LocalTime.now();
         arrivalTime = java.time.LocalTime.now();
         daysOfWeek = new HashSet<DayOfWeek>();
+        formattedDaysOfWeek = "";
     }
 
     public String getFlightDesignator() {
@@ -100,6 +102,7 @@ public class ScheduledFlight implements Serializable
             throw new IllegalArgumentException("daysOfWeek Hashset is null.");
         }
         this.daysOfWeek = daysOfWeek;
+        updateFormattedDaysOfWeek();
     }
 
     @Override
@@ -113,17 +116,19 @@ public class ScheduledFlight implements Serializable
                 ", daysOfWeek=" + daysOfWeek +
                 '}';
     }
-
-    public String formattedDaysOfWeek()
+    public String getFormattedDaysOfWeek()
     {
-        String output = "";
-        if (daysOfWeek.contains(DayOfWeek.SATURDAY)) output += "S";
-        if (daysOfWeek.contains(DayOfWeek.FRIDAY)) output += "F";
-        if (daysOfWeek.contains(DayOfWeek.THURSDAY)) output += "R";
-        if (daysOfWeek.contains(DayOfWeek.WEDNESDAY)) output += "W";
-        if (daysOfWeek.contains(DayOfWeek.TUESDAY)) output += "T";
-        if (daysOfWeek.contains(DayOfWeek.MONDAY)) output += "M";
-        if (daysOfWeek.contains(DayOfWeek.SUNDAY)) output += "U";
-        return output;
+        return formattedDaysOfWeek;
+    }
+    private void updateFormattedDaysOfWeek()
+    {
+        formattedDaysOfWeek = "";
+        if (daysOfWeek.contains(DayOfWeek.SUNDAY)) formattedDaysOfWeek += "U";
+        if (daysOfWeek.contains(DayOfWeek.MONDAY)) formattedDaysOfWeek += "M";
+        if (daysOfWeek.contains(DayOfWeek.TUESDAY)) formattedDaysOfWeek += "T";
+        if (daysOfWeek.contains(DayOfWeek.WEDNESDAY)) formattedDaysOfWeek += "W";
+        if (daysOfWeek.contains(DayOfWeek.THURSDAY)) formattedDaysOfWeek += "R";
+        if (daysOfWeek.contains(DayOfWeek.FRIDAY)) formattedDaysOfWeek += "F";
+        if (daysOfWeek.contains(DayOfWeek.SATURDAY)) formattedDaysOfWeek += "S";
     }
 }

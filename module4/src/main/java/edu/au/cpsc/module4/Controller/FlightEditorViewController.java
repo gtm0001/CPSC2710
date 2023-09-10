@@ -4,12 +4,15 @@ import edu.au.cpsc.module4.Model.ScheduledFlight;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.layout.GridPane;
 
 import java.time.DayOfWeek;
 import java.util.HashSet;
 
-public class FlightEditorController
+public class FlightEditorViewController
 {
+    @FXML
+    private GridPane flightEditorView;
     @FXML
     private TextField flightDesignatorTextField, departureAirportTextField, arrivalAirportTextField;
     @FXML

@@ -13,7 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.List;
 
-public class FlightTableController {
+public class FlightTableViewController {
 
     @FXML
     private TableView<ScheduledFlight> flightTableView;
@@ -31,7 +31,7 @@ public class FlightTableController {
         departureAirportTableColumn.setCellValueFactory
                 (new PropertyValueFactory<ScheduledFlight, String>("departureAirportIdent"));
         daysOfWeekTableColumn.setCellValueFactory
-                (new PropertyValueFactory<ScheduledFlight, String>("formattedDaysOfWeek()"));
+                (new PropertyValueFactory<ScheduledFlight, String>("formattedDaysOfWeek"));
         flightTableView.getSelectionModel().selectedItemProperty().
                 addListener(change -> tableSelectionChanged());
     }
