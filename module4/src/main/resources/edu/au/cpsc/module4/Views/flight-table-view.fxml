@@ -2,11 +2,11 @@
 
 <?import javafx.scene.control.*?>
 
-<TableView fx:id="flightTableView" prefHeight="200.0" prefWidth="308.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module4.Controller.FlightTableViewController">
+<TableView fx:id="flightTableView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module4.Controller.FlightTableViewController">
   <columns>
-    <TableColumn fx:id="flightDesignatorTableColumn" prefWidth="75.0" text="Flight Designator" />
-    <TableColumn fx:id="departureAirportTableColumn" prefWidth="75.0" text="Departure Airport" />
-      <TableColumn fx:id="arrivalAirportTableColumn" prefWidth="75.0" text="Arrival Airport" />
-      <TableColumn fx:id="daysOfWeekTableColumn" prefWidth="75.0" text="Days of Week" />
+    <TableColumn fx:id="flightDesignatorTableColumn" prefWidth="125.0" text="Flight Designator" />
+    <TableColumn fx:id="departureAirportTableColumn" prefWidth="125.0" text="Departure Airport" />
+      <TableColumn fx:id="arrivalAirportTableColumn" prefWidth="125.0" text="Arrival Airport" />
+      <TableColumn fx:id="daysOfWeekTableColumn" prefWidth="125.0" text="Days of Week" />
   </columns>
 </TableView>

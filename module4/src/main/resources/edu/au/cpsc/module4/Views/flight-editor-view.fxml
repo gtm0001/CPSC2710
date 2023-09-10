@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane fx:id="flightEditorView" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module4.Controller.FlightEditorViewController">
+<GridPane fx:id="flightEditorView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module4.Controller.FlightEditorViewController">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="175.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="175.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -15,22 +16,34 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="Flight Designator" />
-      <Label text="Departure Airport" GridPane.rowIndex="1" />
-      <Label text="Arrival Airport" GridPane.rowIndex="2" />
-      <Label text="Days of Week" GridPane.rowIndex="3" />
+      <Label text="Flight Designator">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label text="Departure Airport" GridPane.rowIndex="1">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label text="Arrival Airport" GridPane.rowIndex="2">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label text="Days of Week" GridPane.rowIndex="3">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
       <TextField fx:id="flightDesignatorTextField" GridPane.columnIndex="1" />
       <TextField fx:id="departureAirportTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <TextField fx:id="arrivalAirportTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <ToggleButton fx:id="sundayButton" mnemonicParsing="false" onAction="#sundayOnAction" text="U" />
-            <ToggleButton fx:id="mondayButton" mnemonicParsing="false" onAction="#mondayOnAction" text="M" />
-            <ToggleButton fx:id="tuesdayButton" mnemonicParsing="false" onAction="#tuesdayOnAction" text="T" />
-            <ToggleButton fx:id="wednesdayButton" mnemonicParsing="false" onAction="#wednesdayOnAction" text="W" />
-            <ToggleButton fx:id="thursdayButton" mnemonicParsing="false" onAction="#thursdayOnAction" text="R" />
-            <ToggleButton fx:id="fridayButton" mnemonicParsing="false" onAction="#fridayOnAction" text="F" />
-            <ToggleButton fx:id="saturdayButton" mnemonicParsing="false" onAction="#saturdayOnAction" text="S" />
+            <ToggleButton fx:id="sundayButton" mnemonicParsing="false" text="U" />
+            <ToggleButton fx:id="mondayButton" mnemonicParsing="false" text="M" />
+            <ToggleButton fx:id="tuesdayButton" mnemonicParsing="false" text="T" />
+            <ToggleButton fx:id="wednesdayButton" mnemonicParsing="false" text="W" />
+            <ToggleButton fx:id="thursdayButton" mnemonicParsing="false" text="R" />
+            <ToggleButton fx:id="fridayButton" mnemonicParsing="false" text="F" />
+            <ToggleButton fx:id="saturdayButton" mnemonicParsing="false" text="S" />
          </children>
       </HBox>
    </children>

@@ -26,47 +26,20 @@ public class FlightEditorViewController
             flightDesignatorTextField.clear();
             departureAirportTextField.clear();
             arrivalAirportTextField.clear();
-            sundayButton.setSelected(false);
-            mondayButton.setSelected(false);
-            tuesdayButton.setSelected(false);
-            wednesdayButton.setSelected(false);
-            thursdayButton.setSelected(false);
-            fridayButton.setSelected(false);
-            saturdayButton.setSelected(false);
+            clearDayButtons();
             return;
         }
         flightDesignatorTextField.setText(flight.getFlightDesignator());
         departureAirportTextField.setText(flight.getDepartureAirportIdent());
         arrivalAirportTextField.setText(flight.getArrivalAirportIdent());
         HashSet<DayOfWeek> daysOfWeek = flight.getDaysOfWeek();
-        if(daysOfWeek.contains(DayOfWeek.SUNDAY))
-        {
-            sundayButton.setSelected(true);
-        }
-        if(daysOfWeek.contains(DayOfWeek.MONDAY))
-        {
-            mondayButton.setSelected(true);
-        }
-        if(daysOfWeek.contains(DayOfWeek.TUESDAY))
-        {
-            tuesdayButton.setSelected(true);
-        }
-        if(daysOfWeek.contains(DayOfWeek.WEDNESDAY))
-        {
-            wednesdayButton.setSelected(true);
-        }
-        if(daysOfWeek.contains(DayOfWeek.THURSDAY))
-        {
-            thursdayButton.setSelected(true);
-        }
-        if(daysOfWeek.contains(DayOfWeek.FRIDAY))
-        {
-            fridayButton.setSelected(true);
-        }
-        if(daysOfWeek.contains(DayOfWeek.SATURDAY))
-        {
-            saturdayButton.setSelected(true);
-        }
+        sundayButton.setSelected(daysOfWeek.contains(DayOfWeek.SUNDAY));
+        mondayButton.setSelected(daysOfWeek.contains(DayOfWeek.MONDAY));
+        tuesdayButton.setSelected(daysOfWeek.contains(DayOfWeek.TUESDAY));
+        wednesdayButton.setSelected(daysOfWeek.contains(DayOfWeek.WEDNESDAY));
+        thursdayButton.setSelected(daysOfWeek.contains(DayOfWeek.THURSDAY));
+        fridayButton.setSelected(daysOfWeek.contains(DayOfWeek.FRIDAY));
+        saturdayButton.setSelected(daysOfWeek.contains(DayOfWeek.SATURDAY));
     }
     public void updateFlight(ScheduledFlight flight)
     {
@@ -104,39 +77,14 @@ public class FlightEditorViewController
         }
         flight.setDaysOfWeek(daysOfWeek);
     }
-    @FXML
-    protected void sundayOnAction()
+    public void clearDayButtons()
     {
-
-    }
-    @FXML
-    protected void mondayOnAction()
-    {
-
-    }
-    @FXML
-    protected void tuesdayOnAction()
-    {
-
-    }
-    @FXML
-    protected void wednesdayOnAction()
-    {
-
-    }
-    @FXML
-    protected void thursdayOnAction()
-    {
-
-    }
-    @FXML
-    protected void fridayOnAction()
-    {
-
-    }
-    @FXML
-    protected void saturdayOnAction()
-    {
-
+        sundayButton.setSelected(false);
+        mondayButton.setSelected(false);
+        tuesdayButton.setSelected(false);
+        wednesdayButton.setSelected(false);
+        thursdayButton.setSelected(false);
+        fridayButton.setSelected(false);
+        saturdayButton.setSelected(false);
     }
 }
