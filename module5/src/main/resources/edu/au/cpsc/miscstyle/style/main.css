@@ -1,0 +1,52 @@
+.background
+{
+    -fx-background-color: #dad7cd;
+}
+.foreground
+{
+    -fx-fill: #272838;
+}
+.highlight
+{
+    -fx-fill: #ff6b6b;
+}
+.accent
+{
+    -fx-fill: #7e7f9a;
+}
+VBox Group Rectangle
+{
+    -fx-stroke-type: inside;
+    -fx-stroke-width: 5px;
+    -fx-stroke: rgb(70, 155, 75);
+    -fx-fill: rgb(0,0,0,0);
+}
+VBox Group Circle
+{
+    -fx-fill: #7e7f9a;
+}
+Hyperlink
+{
+    -fx-text-fill: #ff6b6b;
+    -fx-underline: true;
+}
+Hyperlink:visited
+{
+    -fx-text-fill: #272838;
+}
+.combo-box .arrow
+{
+    -fx-background-color: white;
+}
+.combo-box .arrow-button
+{
+    -fx-background-color: #ff6b6b;
+}
+.check-box .box
+{
+    -fx-background-color: #7e7f9a;
+}
+#button-row
+{
+    -fx-alignment: center-right;
+}
