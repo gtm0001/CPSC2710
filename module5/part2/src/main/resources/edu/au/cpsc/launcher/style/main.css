@@ -1,0 +1,30 @@
+@font-face
+{
+    font-family: "Lato-Regular";
+    src: url(../font/Lato-Regular.ttf);
+}
+.root
+{
+    -fx-font-family: "Lato-Regular";
+    -fx-font-size: 24pt;
+}
+.button_airports
+{
+    -fx-graphic: url(../icons/airport_icon.png);
+}
+.button_aircraft
+{
+    -fx-graphic: url(../icons/aircraft_icon.png);
+}
+.button_reservations
+{
+    -fx-graphic: url(../icons/reservation_icon.png);
+}
+.button_schedules
+{
+    -fx-graphic: url(../icons/schedule_icon.png);
+}
+.button
+{
+    -fx-opacity: 0.85;
+}
