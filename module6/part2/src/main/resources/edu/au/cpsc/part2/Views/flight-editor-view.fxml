@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="flightEditorView" minHeight="-Infinity" minWidth="-Infinity" vgap="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.part2.Controller.FlightEditorViewController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="175.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="175.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Flight Designator">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Label>
+      <Label text="Departure Airport" GridPane.rowIndex="1">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label text="Arrival Airport" GridPane.rowIndex="2">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label fx:id="daysOfWeekLabel" styleClass="error" text="Days of Week" GridPane.rowIndex="3">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <TextField fx:id="flightDesignatorTextField" onKeyTyped="#flightDesignatorFieldTyped" styleClass="error" GridPane.columnIndex="1">
+         <padding>
+            <Insets bottom="4.0" top="4.0" />
+         </padding></TextField>
+      <TextField fx:id="departureAirportTextField" onKeyTyped="#departureFieldTyped" styleClass="error" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="4.0" top="4.0" />
+         </padding></TextField>
+      <TextField fx:id="arrivalAirportTextField" onKeyTyped="#arrivalFieldTyped" styleClass="error" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="4.0" top="4.0" />
+         </padding></TextField>
+      <Label fx:id="validationErrorLabel" text="Please fix input errors." GridPane.columnSpan="2" GridPane.rowIndex="4">
+         <styleClass>
+            <String fx:value="hidden" />
+            <String fx:value="validation-error-label" />
+         </styleClass></Label>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <ToggleButton fx:id="sundayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="U" />
+            <ToggleButton fx:id="mondayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="M" />
+            <ToggleButton fx:id="tuesdayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="T" />
+            <ToggleButton fx:id="wednesdayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="W" />
+            <ToggleButton fx:id="thursdayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="R" />
+            <ToggleButton fx:id="fridayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="F" />
+            <ToggleButton fx:id="saturdayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="S" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</GridPane>

@@ -1,4 +1,4 @@
-module edu.au.cpsc.part1 {
+module edu.au.cpsc.part2 {
     requires javafx.controls;
     requires javafx.fxml;
 

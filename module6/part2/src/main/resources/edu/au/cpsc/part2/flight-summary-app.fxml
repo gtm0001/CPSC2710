@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" stylesheets="@style/main.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.part2.Controller.FlightSummaryAppController">
+   <top>
+      <fx:include fx:id="flightTableView" source="Views/flight-table-view.fxml" />
+   </top>
+   <center>
+      <fx:include fx:id="flightEditorView" source="Views/flight-editor-view.fxml" />
+   </center>
+   <bottom>
+      <ButtonBar BorderPane.alignment="CENTER">
+        <buttons>
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonAction" text="Update" />
+            <Button fx:id="newButton" mnemonicParsing="false" onAction="#newButtonAction" text="New" />
+          <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete" />
+        </buttons>
+      </ButtonBar>
+   </bottom>
+</BorderPane>
