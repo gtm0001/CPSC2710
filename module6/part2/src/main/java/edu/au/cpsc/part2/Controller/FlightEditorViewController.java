@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 
 import java.time.DayOfWeek;
@@ -108,12 +110,9 @@ public class FlightEditorViewController
     private boolean validate()
     {
         boolean isValid = true;
-//        isValid = validFieldNotEmpty(flightDesignatorTextField);
-//        isValid = validFieldNotEmpty(arrivalAirportTextField) && isValid;
-//        isValid = validFieldNotEmpty(departureAirportTextField) && isValid;
-        isValid = (model.getFlightDesignator().trim().length() == 0) && isValid;
-        isValid = (model.getArrivalAirport().trim().length() == 0) && isValid;
-        isValid = (model.getDepartureAirport().trim().length() == 0) && isValid;
+        isValid = validFieldNotEmpty(flightDesignatorTextField);
+        isValid = validFieldNotEmpty(arrivalAirportTextField) && isValid;
+        isValid = validFieldNotEmpty(departureAirportTextField) && isValid;
         isValid = validButtonsNotSet() && isValid;
         if (isValid)
         {
@@ -170,24 +169,20 @@ public class FlightEditorViewController
     protected void flightDesignatorFieldTyped()
     {
         validFieldNotEmpty(flightDesignatorTextField);
-        validate();
     }
     @FXML
     protected void departureFieldTyped()
     {
         validFieldNotEmpty(departureAirportTextField);
-        validate();
     }
     @FXML
     protected void  arrivalFieldTyped()
     {
         validFieldNotEmpty(arrivalAirportTextField);
-        validate();
     }
     @FXML
     protected void dayOfWeekButtonSelected()
     {
         validButtonsNotSet();
-        validate();
     }
 }

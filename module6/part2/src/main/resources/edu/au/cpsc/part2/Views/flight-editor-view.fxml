@@ -61,7 +61,7 @@
          </styleClass></Label>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <ToggleButton fx:id="sundayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="U" />
+            <ToggleButton fx:id="sundayButton" mnemonicParsing="false" onMouseClicked="#dayOfWeekButtonSelected" text="U" />
             <ToggleButton fx:id="mondayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="M" />
             <ToggleButton fx:id="tuesdayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="T" />
             <ToggleButton fx:id="wednesdayButton" mnemonicParsing="false" onAction="#dayOfWeekButtonSelected" text="W" />
