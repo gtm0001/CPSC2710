@@ -3,12 +3,11 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 
-
-<TableView fx:id="detailedPassTableView" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.satpass.controller.DetailedPassTableViewController">
+<TableView fx:id="detailedPassTableView" prefWidth="600.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.satpass.controller.DetailedPassTableViewController">
   <columns>
-    <TableColumn fx:id="timeColumn" prefWidth="100.0" text="Time" />
-    <TableColumn fx:id="azimuthColumn" prefWidth="100.0" text="Azimuth" />
-      <TableColumn fx:id="elevationColumn" prefWidth="100.0" text="Elevation" />
-      <TableColumn fx:id="rangeColumn" prefWidth="100.0" text="Range" />
+    <TableColumn fx:id="timeColumn" prefWidth="100.0" text="Time (GMT)" />
+    <TableColumn fx:id="azimuthColumn" prefWidth="100.0" text="Azimuth (deg)" />
+      <TableColumn fx:id="elevationColumn" prefWidth="100.0" text="Elevation (deg)" />
+      <TableColumn fx:id="rangeColumn" prefWidth="100.0" text="Range (km)" />
   </columns>
 </TableView>

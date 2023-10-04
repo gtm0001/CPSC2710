@@ -30,14 +30,19 @@ public class PassTableViewController
         passList = new ArrayList<>();
         riseTimeColumn.setCellValueFactory
                 (new PropertyValueFactory<Pass,String>("riseTime"));
+        riseTimeColumn.prefWidthProperty().bind(passTableView.widthProperty().multiply(.2));
         riseAzColumn.setCellValueFactory
                 (new PropertyValueFactory<Pass,String>("riseAz"));
+        riseAzColumn.prefWidthProperty().bind(passTableView.widthProperty().multiply(.2));
         maxElColumn.setCellValueFactory
                 (new PropertyValueFactory<Pass,String>("maxEl"));
+        maxElColumn.prefWidthProperty().bind(passTableView.widthProperty().multiply(.2));
         setTimeColumn.setCellValueFactory
                 (new PropertyValueFactory<Pass,String>("setTime"));
+        setTimeColumn.prefWidthProperty().bind(passTableView.widthProperty().multiply(.2));
         setAzColumn.setCellValueFactory
                 (new PropertyValueFactory<Pass,String>("setAz"));
+        setAzColumn.prefWidthProperty().bind(passTableView.widthProperty().multiply(.2));
 
         EventHandler<MouseEvent> onTableClick = this::tableRowClicked;
         passTableView.setRowFactory(s ->

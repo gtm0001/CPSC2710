@@ -1,3 +1,13 @@
+.root
+{
+    -fx-base: #34312D;
+    -fx-control-inner-background: derive(-fx-base, 20%);
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, -10%);
+    -fx-accent: #7E7F83;
+    -fx-focus-color: #F3F3F4;
+    -fx-faint-focus-color: #D9C5B2;
+}
+
 .error
 {
     -fx-text-fill: red;
@@ -5,4 +15,21 @@
 .hidden
 {
     visibility: hidden;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
 }

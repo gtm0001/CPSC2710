@@ -33,12 +33,16 @@ public class DetailedPassTableViewController
         fixPoints.add(new FixPoint(temp));
         timeColumn.setCellValueFactory
                 (new PropertyValueFactory<FixPoint,String>("time"));
+        timeColumn.prefWidthProperty().bind(detailedPassTableView.widthProperty().multiply(.25));
         azimuthColumn.setCellValueFactory
                 (new PropertyValueFactory<FixPoint,String>("azimuth"));
+        azimuthColumn.prefWidthProperty().bind(detailedPassTableView.widthProperty().multiply(.25));
         elevationColumn.setCellValueFactory
                 (new PropertyValueFactory<FixPoint,String>("elevation"));
+        elevationColumn.prefWidthProperty().bind(detailedPassTableView.widthProperty().multiply(.25));
         rangeColumn.setCellValueFactory
                 (new PropertyValueFactory<FixPoint,String>("range"));
+        rangeColumn.prefWidthProperty().bind(detailedPassTableView.widthProperty().multiply(.25));
     }
     public void showPass(List<FixPoint> list)
     {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 
@@ -7,11 +8,14 @@
   <columns>
     <TableColumn fx:id="satNoColumn" prefWidth="75.0" text="SatNo" />
     <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
-      <TableColumn fx:id="launchYearColumn" prefWidth="75.0" text="Launch Year" />
+      <TableColumn fx:id="launchYearColumn" prefWidth="75.0" text="Year" />
       <TableColumn fx:id="ildColumn" prefWidth="75.0" text="ILD" />
-      <TableColumn fx:id="inclinationColumn" prefWidth="75.0" text="Inclination" />
-      <TableColumn fx:id="meanMotionColumn" prefWidth="75.0" text="Mean Motion" />
-      <TableColumn fx:id="eccentricityColumn" prefWidth="75.0" text="Eccentricity" />
+      <TableColumn fx:id="inclinationColumn" prefWidth="75.0" text="Inc." />
+      <TableColumn fx:id="meanMotionColumn" prefWidth="75.0" text="MM" />
+      <TableColumn fx:id="eccentricityColumn" prefWidth="75.0" text="Ecc." />
       <TableColumn fx:id="epochColumn" prefWidth="75.0" text="Epoch" />
   </columns>
+   <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </padding>
 </TableView>

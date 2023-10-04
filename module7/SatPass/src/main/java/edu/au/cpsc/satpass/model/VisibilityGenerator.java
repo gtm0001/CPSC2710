@@ -110,7 +110,7 @@ public class VisibilityGenerator
             tempList.add(String.valueOf(FastMath.toDegrees(groundStationFrame.getElevation
                     (state.getPVCoordinates().getPosition(), state.getFrame(), stepper.getDate()))));
             tempList.add(String.valueOf(groundStationFrame.getRange
-                    (state.getPVCoordinates().getPosition(), state.getFrame(), stepper.getDate())));
+                    (state.getPVCoordinates().getPosition(), state.getFrame(), stepper.getDate()) / 1000)); //convert to km
             visList.add(tempList);
             stepper = new AbsoluteDate(stepper, 1);
         }
