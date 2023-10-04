@@ -1,0 +1,8 @@
+.error
+{
+    -fx-text-fill: red;
+}
+.hidden
+{
+    visibility: hidden;
+}

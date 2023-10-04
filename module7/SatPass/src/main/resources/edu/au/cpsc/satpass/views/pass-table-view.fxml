@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="passTableView" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.satpass.controller.PassTableViewController">
+  <columns>
+    <TableColumn fx:id="riseTimeColumn" prefWidth="75.0" text="Rise Time" />
+    <TableColumn fx:id="riseAzColumn" prefWidth="75.0" text="Rise Az" />
+      <TableColumn fx:id="maxElColumn" prefWidth="75.0" text="Max El" />
+      <TableColumn fx:id="setTimeColumn" prefWidth="75.0" text="Set Time" />
+      <TableColumn fx:id="setAzColumn" prefWidth="75.0" text="Set Az" />
+  </columns>
+</TableView>
